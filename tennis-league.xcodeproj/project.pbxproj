@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		12ADC1BE2B950777005D93AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADC1BD2B950777005D93AF /* AppDelegate.swift */; };
 		12ADC1C02B950777005D93AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADC1BF2B950777005D93AF /* SceneDelegate.swift */; };
-		12ADC1C22B950777005D93AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADC1C12B950777005D93AF /* ViewController.swift */; };
-		12ADC1C52B950777005D93AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12ADC1C32B950777005D93AF /* Main.storyboard */; };
 		12ADC1C72B950778005D93AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12ADC1C62B950778005D93AF /* Assets.xcassets */; };
 		12ADC1CA2B950778005D93AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12ADC1C82B950778005D93AF /* LaunchScreen.storyboard */; };
 		12ADC1D52B950778005D93AF /* tennis_leagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADC1D42B950778005D93AF /* tennis_leagueTests.swift */; };
 		12ADC1DF2B950778005D93AF /* tennis_leagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADC1DE2B950778005D93AF /* tennis_leagueUITests.swift */; };
 		12ADC1E12B950778005D93AF /* tennis_leagueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADC1E02B950778005D93AF /* tennis_leagueUITestsLaunchTests.swift */; };
+		12ADC1F32B950B3D005D93AF /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12ADC1F22B950B3D005D93AF /* GamesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		12ADC1BA2B950777005D93AF /* tennis-league.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tennis-league.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ADC1BD2B950777005D93AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12ADC1BF2B950777005D93AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12ADC1C12B950777005D93AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		12ADC1C42B950777005D93AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12ADC1C62B950778005D93AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12ADC1C92B950778005D93AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12ADC1CB2B950778005D93AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		12ADC1DA2B950778005D93AF /* tennis-leagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tennis-leagueUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12ADC1DE2B950778005D93AF /* tennis_leagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tennis_leagueUITests.swift; sourceTree = "<group>"; };
 		12ADC1E02B950778005D93AF /* tennis_leagueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tennis_leagueUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12ADC1F22B950B3D005D93AF /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +97,9 @@
 		12ADC1BC2B950777005D93AF /* tennis-league */ = {
 			isa = PBXGroup;
 			children = (
-				12ADC1BD2B950777005D93AF /* AppDelegate.swift */,
-				12ADC1BF2B950777005D93AF /* SceneDelegate.swift */,
-				12ADC1C12B950777005D93AF /* ViewController.swift */,
-				12ADC1C32B950777005D93AF /* Main.storyboard */,
-				12ADC1C62B950778005D93AF /* Assets.xcassets */,
-				12ADC1C82B950778005D93AF /* LaunchScreen.storyboard */,
+				12ADC1EF2B950B07005D93AF /* Sources */,
+				12ADC1EE2B950AD0005D93AF /* Resources */,
+				12ADC1ED2B950AB9005D93AF /* Application */,
 				12ADC1CB2B950778005D93AF /* Info.plist */,
 			);
 			path = "tennis-league";
@@ -125,6 +120,48 @@
 				12ADC1E02B950778005D93AF /* tennis_leagueUITestsLaunchTests.swift */,
 			);
 			path = "tennis-leagueUITests";
+			sourceTree = "<group>";
+		};
+		12ADC1ED2B950AB9005D93AF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				12ADC1C82B950778005D93AF /* LaunchScreen.storyboard */,
+				12ADC1BD2B950777005D93AF /* AppDelegate.swift */,
+				12ADC1BF2B950777005D93AF /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		12ADC1EE2B950AD0005D93AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12ADC1C62B950778005D93AF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		12ADC1EF2B950B07005D93AF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				12ADC1F02B950B16005D93AF /* Scene */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		12ADC1F02B950B16005D93AF /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				12ADC1F12B950B1E005D93AF /* Games */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		12ADC1F12B950B1E005D93AF /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				12ADC1F22B950B3D005D93AF /* GamesViewController.swift */,
+			);
+			path = Games;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +270,6 @@
 			files = (
 				12ADC1CA2B950778005D93AF /* LaunchScreen.storyboard in Resources */,
 				12ADC1C72B950778005D93AF /* Assets.xcassets in Resources */,
-				12ADC1C52B950777005D93AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12ADC1C22B950777005D93AF /* ViewController.swift in Sources */,
+				12ADC1F32B950B3D005D93AF /* GamesViewController.swift in Sources */,
 				12ADC1BE2B950777005D93AF /* AppDelegate.swift in Sources */,
 				12ADC1C02B950777005D93AF /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		12ADC1C32B950777005D93AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				12ADC1C42B950777005D93AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		12ADC1C82B950778005D93AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +470,10 @@
 				INFOPLIST_FILE = "tennis-league/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +499,10 @@
 				INFOPLIST_FILE = "tennis-league/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
