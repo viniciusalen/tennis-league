@@ -19,3 +19,15 @@ targets:
       PRODUCT_BUNDLE_IDENTIFIER: alencarApps.tennis-league
       INFOPLIST_FILE: tennis-league/Info.plist
       CURRENT_PROJECT_VERSION: "1"
+
+  tennis-leagueTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - tennis-leagueTests
+    dependencies:
+      - target: tennis-league
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: "alencarApps.tennis-leagueTests"
