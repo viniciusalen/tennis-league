@@ -9,6 +9,11 @@ options:
   deploymentTarget:
     iOS: "14.5"
 
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 10.0.0
+
 targets:
   tennis-league:
     type: application
@@ -19,7 +24,12 @@ targets:
       PRODUCT_BUNDLE_IDENTIFIER: alencarApps.tennis-league
       INFOPLIST_FILE: tennis-league/Info.plist
       CURRENT_PROJECT_VERSION: "1"
-
+    dependencies:
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestoreSwift
+        
   tennis-leagueTests:
     type: bundle.unit-test
     platform: iOS
