@@ -88,3 +88,12 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# Ignorar arquivos xcodeproj
+*.xcodeproj
+
+# Ignorar arquivos xcworkspace
+*.xcworkspace
+
+# Ignorar arquivos pbxproj
+*.pbxproj

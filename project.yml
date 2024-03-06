@@ -1,0 +1,43 @@
+name: tennis-league
+
+settings:
+  MARKETING_VERSION: "1.0.0"
+  ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: "YES"
+  
+options:
+  xcodeVersion: '9999'
+  deploymentTarget:
+    iOS: "14.5"
+
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: 10.0.0
+
+targets:
+  tennis-league:
+    type: application
+    platform: iOS
+    sources:
+      - tennis-league
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: alencarApps.tennis-league
+      INFOPLIST_FILE: tennis-league/Info.plist
+      CURRENT_PROJECT_VERSION: "1"
+    dependencies:
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestoreSwift
+        
+  tennis-leagueTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - tennis-leagueTests
+    dependencies:
+      - target: tennis-league
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: "alencarApps.tennis-leagueTests"
