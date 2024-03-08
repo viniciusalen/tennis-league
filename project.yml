@@ -29,6 +29,8 @@ targets:
         product: FirebaseAuth
       - package: Firebase
         product: FirebaseFirestoreSwift
+      - package: Firebase
+        product: FirebaseDynamicLinks
         
   tennis-leagueTests:
     type: bundle.unit-test

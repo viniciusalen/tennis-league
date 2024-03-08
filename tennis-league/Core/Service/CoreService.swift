@@ -1,20 +1,25 @@
 import FirebaseFirestore
+import FirebaseAuth
 
 protocol CoreServicing {
-    func execute<T: Decodable>(
+    func getDocuments<T: Decodable>(
         query: Query,
         then completion: @escaping (Result<[T], ApiError>) -> Void
     )
-    func execute<T: Decodable>(
+    func getDocument<T: Decodable>(
         documentReference: DocumentReference,
         then completion: @escaping (Result<T, ApiError>) -> Void
     )
 }
 
-final class CoreService: CoreServicing {
-    // MARK: Documents
+final class CoreService {
+    let db = Firestore.firestore()
+}
+
+extension CoreService: CoreServicing {
+    // MARK: - Documents
     /// Get possibles documents decoded on specific model based on query
-    func execute<T: Decodable>(
+    func getDocuments<T: Decodable>(
         query: Query,
         then completion: @escaping (Result<[T], ApiError>) -> Void
     ) {
@@ -27,7 +32,7 @@ final class CoreService: CoreServicing {
     
     // MARK: - Only Document
     /// Get document decoded on specific model based on query
-    func execute<T: Decodable>(
+    func getDocument<T: Decodable>(
         documentReference: DocumentReference,
         then completion: @escaping (Result<T, ApiError>) -> Void
     ) {
@@ -105,7 +110,6 @@ private extension CoreService {
         }
     }
     
-    // MARK: - HELPERS
     func logFailsQueryLogError() {
         print("----- FAILS QUERY ----")
         print("ERROR: Query has not return any result")

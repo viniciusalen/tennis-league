@@ -31,7 +31,7 @@ final class HomeViewController: ViewController<HomeInteracting, UIView> {
     }
 
     override func configureViews() {
-        // template
+        view.backgroundColor = .blue
     }
 }
 
