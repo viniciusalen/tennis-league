@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         if let incomingURL = userActivity.webpageURL {
-            print("Incoming URL is \(incomingURL)")
+//            print("Incoming URL is \(incomingURL)")
             let linkHandled = DynamicLinks.dynamicLinks().handleUniversalLink(incomingURL) { receivedDynamicLink, error in
                 guard error == nil else {
                     print("Found an error! \(error!.localizedDescription)")
@@ -58,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Thats WEIRD. My dynamic link object has no url")
             return
         }
+        NotificationCenter.default.post(name: NSNotification.Name("HandleOpenURL"), object: nil, userInfo: ["url": url])
         print("Your incoming link paremeter is \(url.absoluteString)")
     }
 }

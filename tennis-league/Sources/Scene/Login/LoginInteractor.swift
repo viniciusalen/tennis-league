@@ -38,6 +38,7 @@ extension LoginInteractor: LoginInteracting {
     
     func loadInitialState() {
         presenter.displaySomething()
+        createUrlObserver()
     }
 }
 
