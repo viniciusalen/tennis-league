@@ -66,6 +66,7 @@ final class LoginViewController: ViewController<LoginInteracting, UIView> {
     }
 
     override func configureViews() {
+        navigationController?.navigationBar.barTintColor = .black
         view.backgroundColor = .systemBackground
     }
 }
